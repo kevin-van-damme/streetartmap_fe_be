@@ -1,0 +1,22 @@
+name: tailwind
+type: theme
+'base theme': stable9
+version: 1.0.0
+libraries:
+  - tailwind/base
+  - tailwind/messages
+  - core/normalize
+libraries-extend:
+  user/drupal.user:
+    - tailwind/user
+  core/drupal.dropbutton:
+    - tailwind/dropbutton
+  core/drupal.dialog:
+    - tailwind/dialog
+  file/drupal.file:
+    - tailwind/file
+  core/drupal.progress:
+    - tailwind/progress
+description: ''
+core_version_requirement: ^11
+generator: 'starterkit_theme:11.1.6'
