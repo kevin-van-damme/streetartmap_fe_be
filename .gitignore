@@ -1,0 +1,44 @@
+# Drupal core and vendor files
+/vendor/
+/core/
+
+# Sites files
+/sites/*/files/
+/sites/default/files/
+
+# Cache and temporary files
+/tmp/
+/sites/*/files/styles/
+/sites/*/files/js/
+/sites/*/files/css/
+/sites/*/files/php/*
+
+# Configuration sync folder
+/sites/default/files/config_*/sync/
+
+# Logs and session files
+/sites/*/files/sessions/
+/sites/*/files/php
+/sites/*/files/logs/
+
+# Node modules and npm logs
+/node_modules/
+/npm-debug.log
+/.npm/
+
+# Composer lock file
+/composer.lock
+
+# Build artifacts
+/dist/
+/build/
+
+# IDE or editor files
+/.vscode/
+/.idea/
+/*.sublime-workspace
+/*.sublime-project
+
+# OS files
+.DS_Store
+Thumbs.db
