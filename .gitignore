@@ -6,7 +6,7 @@ sites/*/services.yml
 /sites/*/config/*
 /vendor/
 /node_modules/
-/composer.lock
+
 /.idea/
 /.ddev/
 /.env
@@ -32,13 +32,13 @@ sites/*/services.yml
 # Ignore vendor, node_modules, and composer.lock
 /vendor/
 /node_modules/
-/composer.lock
+
 
 # Ignore IDE configurations
 /.idea/
 
 # Ignore DDEV and environment files
-/.ddev/
+
 /.env
 
 # MACOS 
