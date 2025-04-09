@@ -2,7 +2,7 @@ _core:
   default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
 langcode: en
 uuid: 7d370370-df0d-4ae1-af9d-cc7eb54dd22c
-name: 'Drush Site-Install'
+name: 'Street Art Map'
 mail: admin@example.com
 slogan: ''
 page:

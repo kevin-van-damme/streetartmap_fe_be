@@ -1,0 +1,21 @@
+uuid: f51e3c65-9c9a-4bcf-b9e8-9112caa0b1dc
+langcode: en
+status: true
+dependencies: {  }
+name: street_art_display_format
+label: 'Street Art Display Format (250x250)'
+effects:
+  b7953476-1992-4aaf-9273-0559fb58cb9c:
+    uuid: b7953476-1992-4aaf-9273-0559fb58cb9c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 250
+      height: 250
+      anchor: center-center
+  f0dcfb05-32b7-4bba-8cdd-0a13811cf0a5:
+    uuid: f0dcfb05-32b7-4bba-8cdd-0a13811cf0a5
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp
