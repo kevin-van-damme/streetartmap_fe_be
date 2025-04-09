@@ -1,0 +1,49 @@
+# Drupal specific
+/sites/*/files/
+sites/*/private/
+sites/*/settings.local.php
+sites/*/services.yml
+/sites/*/config/*
+/vendor/
+/node_modules/
+/composer.lock
+/.idea/
+/.ddev/
+/.env
+/web/core
+/web/modules/contrib
+/web/themes/contrib
+/web/profiles/contrib
+
+/web/themes/custom/
+
+# Ignore Drupal's file directories
+/sites/*/files/
+/sites/*/private/
+
+# Ignore Drupal settings and services
+/sites/*/settings.local.php
+/sites/*/services.local.yml
+/sites/*/services.yml
+
+# Ignore Drupal config directory if not managing config
+/sites/*/config/
+
+# Ignore vendor, node_modules, and composer.lock
+/vendor/
+/node_modules/
+/composer.lock
+
+# Ignore IDE configurations
+/.idea/
+
+# Ignore DDEV and environment files
+/.ddev/
+/.env
+
+# MACOS 
+.DS_Store
+.vscode/
+*.log
+*.tmp
+
