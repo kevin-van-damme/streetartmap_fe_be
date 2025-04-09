@@ -1,0 +1,22 @@
+uuid: 118b0c6f-4ed9-43c2-94a0-f95e986970b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: image
+label: Image
+type: 'canonical_entities:node'
+pattern: '/uploaded_images/[node:title]'
+selection_criteria:
+  26a38bec-6f2d-4f7a-8e13-c17f2d206839:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 26a38bec-6f2d-4f7a-8e13-c17f2d206839
+    context_mapping:
+      node: node
+    bundles:
+      upload_image: upload_image
+selection_logic: and
+weight: -5
+relationships: {  }
