@@ -1,0 +1,9 @@
+uuid: 69447834-43ff-4ca0-be68-37a15903d6b9
+langcode: en
+status: true
+dependencies: {  }
+name: Categories
+vid: categories
+description: 'use Categories to determine what theme/style the user is looking for in streetart'
+weight: 0
+new_revision: false

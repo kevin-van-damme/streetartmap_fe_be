@@ -1,0 +1,18 @@
+uuid: 2d9c5000-ff66-4042-9c8f-c5d086ca1686
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.upload_user
+id: node.upload_user.title
+field_name: title
+entity_type: node
+bundle: upload_user
+label: 'Upload Image'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
