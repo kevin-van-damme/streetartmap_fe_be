@@ -24,7 +24,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 104
+    weight: 3
     region: content
   field_description:
     type: string
@@ -32,7 +32,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 101
+    weight: 0
     region: content
   field_map:
     type: leaflet_formatter_default
@@ -128,7 +128,7 @@ content:
       map_lazy_load:
         lazy_load: false
     third_party_settings: {  }
-    weight: 102
+    weight: 1
     region: content
   field_upload_image:
     type: image
@@ -139,11 +139,11 @@ content:
       image_loading:
         attribute: lazy
     third_party_settings: {  }
-    weight: 103
+    weight: 2
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 4
     region: content
 hidden: {  }

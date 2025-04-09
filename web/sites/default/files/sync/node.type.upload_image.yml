@@ -13,6 +13,6 @@ name: 'Upload Image'
 type: upload_image
 description: 'use this to upload Street Art to the site'
 help: null
-new_revision: true
+new_revision: false
 preview_mode: 1
 display_submitted: true
