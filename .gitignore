@@ -6,9 +6,7 @@ sites/*/services.yml
 /sites/*/config/*
 /vendor/
 /node_modules/
-
 /.idea/
-/.ddev/
 /.env
 /web/core
 /web/modules/contrib
