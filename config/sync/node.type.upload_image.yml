@@ -1,0 +1,18 @@
+uuid: 93c6f430-551c-433a-b5b5-60ac865d9eb6
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Upload Image'
+type: upload_image
+description: 'use this to upload Street Art to the site'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,21 @@
+uuid: a60961dc-8ae8-4eac-8a1d-cfadc4ffe1eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_map
+    - node.type.upload_image
+  module:
+    - geofield
+id: node.upload_image.field_map
+field_name: field_map
+entity_type: node
+bundle: upload_image
+label: Map
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geofield

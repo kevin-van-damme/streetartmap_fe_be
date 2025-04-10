@@ -1,0 +1,9 @@
+uuid: 557c315c-746b-4210-bfde-f3e8ce824afe
+langcode: en
+status: true
+dependencies: {  }
+name: Location
+vid: location
+description: 'use Location to add places, areas to where the urban art has been found'
+weight: 0
+new_revision: false
