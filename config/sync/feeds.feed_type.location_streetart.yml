@@ -1,0 +1,65 @@
+uuid: da40711b-af68-41b4-a657-29a398725811
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.location.field_zipcode
+    - taxonomy.vocabulary.location
+  module:
+    - taxonomy
+label: Location
+id: location_streetart
+description: 'use Location to add places, areas to where the urban art has been found'
+help: ''
+import_period: 3600
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'public://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:taxonomy_term'
+processor_configuration:
+  values:
+    vid: location
+  langcode: en
+  insert_new: 1
+  update_existing: 0
+  update_non_existent: _keep
+  skip_hash_check: false
+  skip_validation: false
+  skip_validation_types: {  }
+  authorize: false
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  postal:
+    value: postal
+    label: postal
+    machine_name: postal
+    type: csv
+  name:
+    value: name
+    label: name
+    machine_name: name
+    type: csv
+mappings:
+  -
+    target: field_zipcode
+    map:
+      value: postal
+    settings:
+      language: null
+    unique: {  }
+  -
+    target: name
+    map:
+      value: name
+    settings:
+      language: null
+    unique: {  }

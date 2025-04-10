@@ -1,0 +1,32 @@
+uuid: f6f0180e-b854-41f6-b0f8-60e94aa63b6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.location.feeds_item
+    - field.field.taxonomy_term.location.field_zipcode
+    - taxonomy.vocabulary.location
+  module:
+    - text
+id: taxonomy_term.location.default
+targetEntityType: taxonomy_term
+bundle: location
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_zipcode:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  feeds_item: true

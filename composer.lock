@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "09e18889924da0505ca199ca095ff568",
+    "content-hash": "6043944da1220be3f0441a3b67d3d49a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2012,6 +2012,56 @@
             }
         },
         {
+            "name": "drupal/rate",
+            "version": "3.2.0-rc2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/rate.git",
+                "reference": "3.2.0-rc2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/rate-3.2.0-rc2.zip",
+                "reference": "3.2.0-rc2",
+                "shasum": "b9d35558fe40229fef292607e3505ec5f3a3d11d"
+            },
+            "require": {
+                "drupal/core": "^10.1 || ^11",
+                "drupal/votingapi": "^3.0 || ^4.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.2.0-rc2",
+                    "datestamp": "1740638889",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "ivnish",
+                    "homepage": "https://www.drupal.org/user/3547706"
+                },
+                {
+                    "name": "jordik",
+                    "homepage": "https://www.drupal.org/user/3472907"
+                }
+            ],
+            "description": "Flexible voting options for entity types.",
+            "homepage": "https://www.drupal.org/project/rate",
+            "support": {
+                "source": "https://git.drupalcode.org/project/rate",
+                "issues": "https://www.drupal.org/project/issues/rate"
+            }
+        },
+        {
             "name": "drupal/smtp",
             "version": "1.4.0",
             "source": {
@@ -2157,6 +2207,124 @@
             "homepage": "https://www.drupal.org/project/token",
             "support": {
                 "source": "https://git.drupalcode.org/project/token"
+            }
+        },
+        {
+            "name": "drupal/votingapi",
+            "version": "dev-4.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/votingapi.git",
+                "reference": "010514d0b35e4790faef182a466a0acd82016d22"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11"
+            },
+            "require-dev": {
+                "drupal/token": "^1.5"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-4.0.x": "4.0.x-dev"
+                },
+                "drupal": {
+                    "version": "4.0.x-dev",
+                    "datestamp": "1741652645",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "eaton",
+                    "homepage": "https://www.drupal.org/user/16496"
+                },
+                {
+                    "name": "pedrorocha",
+                    "homepage": "https://www.drupal.org/user/218937"
+                },
+                {
+                    "name": "pifagor",
+                    "homepage": "https://www.drupal.org/user/2375692"
+                },
+                {
+                    "name": "torotil",
+                    "homepage": "https://www.drupal.org/user/865256"
+                },
+                {
+                    "name": "tr",
+                    "homepage": "https://www.drupal.org/user/202830"
+                }
+            ],
+            "description": "Voting API",
+            "homepage": "https://www.drupal.org/project/votingapi",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/votingapi",
+                "issues": "https://drupal.org/project/issues/votingapi"
+            }
+        },
+        {
+            "name": "drupal/votingapi_widgets",
+            "version": "dev-2.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/votingapi_widgets.git",
+                "reference": "da6cfe4b92c06087dda273e1916e4905b1f01025"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "drupal/votingapi": "^4.0"
+            },
+            "require-dev": {
+                "antennaio/jquery-bar-rating": "1.2.2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-2.0.x": "2.0.x-dev"
+                },
+                "drupal": {
+                    "version": "2.0.x-dev",
+                    "datestamp": "1740471598",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "erik seifert",
+                    "homepage": "https://www.drupal.org/user/161429"
+                },
+                {
+                    "name": "ipwa",
+                    "homepage": "https://www.drupal.org/user/130909"
+                },
+                {
+                    "name": "tr",
+                    "homepage": "https://www.drupal.org/user/202830"
+                }
+            ],
+            "description": "Voting API Widgets",
+            "homepage": "https://www.drupal.org/project/votingapi_widgets",
+            "support": {
+                "source": "https://git.drupalcode.org/project/votingapi_widgets",
+                "issues": "https://www.drupal.org/project/issues/votingapi_widgets"
             }
         },
         {
@@ -7104,7 +7272,11 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "drupal/rate": 5,
+        "drupal/votingapi": 20,
+        "drupal/votingapi_widgets": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {},

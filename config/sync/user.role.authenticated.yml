@@ -14,6 +14,7 @@ dependencies:
     - search
     - shortcut
     - system
+    - votingapi_widgets
 _core:
   default_config_hash: cFrlqjtkTfvY3RGccjJkPf1SGIfJ942IrxTLWAO4mgA
 id: authenticated
@@ -26,9 +27,12 @@ permissions:
   - 'access shortcuts'
   - 'access site-wide contact form'
   - 'create upload_image content'
-  - 'delete any upload_image content'
   - 'delete own files'
+  - 'delete own upload_image content'
+  - 'edit own upload_image content'
+  - 'edit own vote on node:upload_image:field_rating'
   - 'post comments'
   - 'search content'
   - 'skip comment approval'
   - 'use text format basic_html'
+  - 'vote on node:upload_image:field_rating'

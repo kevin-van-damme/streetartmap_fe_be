@@ -1,0 +1,25 @@
+uuid: 10048a42-ebdc-475b-9754-dcec667aa976
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rating
+    - node.type.upload_image
+  module:
+    - votingapi_widgets
+id: node.upload_image.field_rating
+field_name: field_rating
+entity_type: node
+bundle: upload_image
+label: Rating
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  anonymous_window: -2
+  result_function: vote_average
+  user_window: -2
+  widget_format: fivestar
+field_type: voting_api_field

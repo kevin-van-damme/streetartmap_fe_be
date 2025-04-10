@@ -1,0 +1,29 @@
+uuid: 20ec039a-e554-40b8-9d03-2656c496d2b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.art_gallery
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: olivero_views_block__art_gallery_block_3
+theme: olivero
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:art_gallery-block_3'
+settings:
+  id: 'views_block:art_gallery-block_3'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/14

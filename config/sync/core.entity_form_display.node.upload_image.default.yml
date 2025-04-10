@@ -5,7 +5,9 @@ dependencies:
   config:
     - field.field.node.upload_image.field_category
     - field.field.node.upload_image.field_description
+    - field.field.node.upload_image.field_location
     - field.field.node.upload_image.field_map
+    - field.field.node.upload_image.field_rating
     - field.field.node.upload_image.field_upload_image
     - image.style.street_art_display_format
     - node.type.upload_image
@@ -13,6 +15,7 @@ dependencies:
     - image
     - leaflet
     - path
+    - votingapi_widgets
 id: node.upload_image.default
 targetEntityType: node
 bundle: upload_image
@@ -20,7 +23,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 6
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -32,15 +35,25 @@ content:
     third_party_settings: {  }
   field_description:
     type: string_textfield
-    weight: 3
+    weight: 4
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_location:
+    type: entity_reference_autocomplete_tags
+    weight: 3
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: 'Enter a city or place...'
+    third_party_settings: {  }
   field_map:
     type: leaflet_widget_default
-    weight: 4
+    weight: 5
     region: content
     settings:
       map:
@@ -103,6 +116,13 @@ content:
       feature_properties:
         values: ''
     third_party_settings: {  }
+  field_rating:
+    type: voting_api_widget
+    weight: 26
+    region: content
+    settings:
+      show_initial_vote: false
+    third_party_settings: {  }
   field_upload_image:
     type: image_image
     weight: 1
@@ -113,27 +133,27 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 9
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 7
+    weight: 8
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 10
+    weight: 11
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 8
+    weight: 9
     region: content
     settings:
       display_label: true
@@ -148,7 +168,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 6
     region: content
     settings:
       match_operator: CONTAINS

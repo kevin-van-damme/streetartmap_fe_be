@@ -1,0 +1,19 @@
+uuid: 22b9d956-6661-48bf-a0b1-00f30209c615
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_zipcode
+    - taxonomy.vocabulary.location
+id: taxonomy_term.location.field_zipcode
+field_name: field_zipcode
+entity_type: taxonomy_term
+bundle: location
+label: zipcode
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
