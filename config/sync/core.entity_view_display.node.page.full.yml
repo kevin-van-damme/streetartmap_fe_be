@@ -1,21 +1,20 @@
-uuid: 9fe802e2-7002-4f17-95ea-95ee32d4ea2e
+uuid: 934076e9-12c5-43f4-838e-ef5715e87992
 langcode: en
-status: true
+status: false
 dependencies:
   config:
+    - core.entity_view_mode.node.full
     - node.type.page
   module:
     - user
 _core:
   default_config_hash: M_Y8L5tfmhx7DR143E05YyZSpvgil6VFvqcfBWykalg
-id: node.page.default
+id: node.page.full
 targetEntityType: node
 bundle: page
-mode: default
+mode: full
 content:
   links:
-    settings: {  }
-    third_party_settings: {  }
     weight: 101
     region: content
 hidden: {  }

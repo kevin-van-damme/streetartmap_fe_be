@@ -7,12 +7,12 @@ dependencies:
 id: image
 label: Image
 type: 'canonical_entities:node'
-pattern: '/uploaded_images/[node:title]'
+pattern: '/node/[node:title]'
 selection_criteria:
-  26a38bec-6f2d-4f7a-8e13-c17f2d206839:
+  6742b3cc-e2cf-40a4-a85a-3ed55f0d8403:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 26a38bec-6f2d-4f7a-8e13-c17f2d206839
+    uuid: 6742b3cc-e2cf-40a4-a85a-3ed55f0d8403
     context_mapping:
       node: node
     bundles:
