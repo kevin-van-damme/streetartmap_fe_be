@@ -14,6 +14,7 @@ dependencies:
     - leaflet_views
     - node
     - user
+    - views_show_more
     - votingapi_widgets
 id: art_gallery
 label: 'Art Gallery'
@@ -1583,11 +1584,11 @@ display:
           separator: ', '
           field_api_classes: false
       pager:
-        type: mini
+        type: show_more
         options:
           offset: 0
           pagination_heading_level: h4
-          items_per_page: 9
+          items_per_page: 12
           total_pages: null
           id: 0
           tags:
@@ -1601,6 +1602,20 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
+          show_more_text: 'Load More'
+          result_display_method: html
+          initial: 12
+          effects:
+            type: fade
+            speed_type: slow
+            speed: slow
+            speed_value: null
+            scroll_offset: 50
+          advance:
+            content_selector: ''
+            pager_selector: ''
+            header_selector: ''
+            footer_selector: ''
       sorts:
         created:
           id: created

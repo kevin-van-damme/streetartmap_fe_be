@@ -1,0 +1,45 @@
+uuid: 2b902f82-5948-4fda-8b8f-39ab290e3661
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.about_us_pictures.field_p1
+    - field.field.node.about_us_pictures.field_p2
+    - image.style.street_art_display_format
+    - node.type.about_us_pictures
+  module:
+    - image
+    - user
+id: node.about_us_pictures.default
+targetEntityType: node
+bundle: about_us_pictures
+mode: default
+content:
+  field_p1:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: street_art_display_format
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_p2:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: street_art_display_format
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

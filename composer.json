@@ -26,6 +26,7 @@
         "drupal/pathauto": "^1.13",
         "drupal/rate": "^3.2@RC",
         "drupal/smtp": "^1.4",
+        "drupal/views_show_more": "^2.0",
         "drupal/votingapi": "4.0.x-dev@dev",
         "drupal/votingapi_widgets": "2.0.x-dev@dev",
         "drush/drush": "^13.5"
