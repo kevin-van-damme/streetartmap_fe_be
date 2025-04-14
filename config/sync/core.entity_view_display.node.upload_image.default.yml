@@ -8,12 +8,14 @@ dependencies:
     - field.field.node.upload_image.field_location
     - field.field.node.upload_image.field_map
     - field.field.node.upload_image.field_rating
+    - field.field.node.upload_image.field_remove_background
     - field.field.node.upload_image.field_upload_image
     - image.style.wide
     - node.type.upload_image
   module:
     - image
     - leaflet
+    - text
     - user
     - votingapi_widgets
 id: node.upload_image.default
@@ -151,6 +153,13 @@ content:
       show_own_vote: false
     third_party_settings: {  }
     weight: 7
+    region: content
+  field_remove_background:
+    type: text_default
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
     region: content
   field_upload_image:
     type: image

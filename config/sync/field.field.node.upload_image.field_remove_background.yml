@@ -1,0 +1,27 @@
+uuid: c50948f0-e47e-4ba6-a972-f97e7b66acc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_remove_background
+    - filter.format.full_html
+    - node.type.upload_image
+  module:
+    - text
+id: node.upload_image.field_remove_background
+field_name: field_remove_background
+entity_type: node
+bundle: upload_image
+label: 'Remove Background'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '<button>Remove Background</button>'
+    format: full_html
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text

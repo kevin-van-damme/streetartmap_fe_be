@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.upload_image.field_location
     - field.field.node.upload_image.field_map
     - field.field.node.upload_image.field_rating
+    - field.field.node.upload_image.field_remove_background
     - field.field.node.upload_image.field_upload_image
     - image.style.street_art_display_format
     - node.type.upload_image
@@ -15,6 +16,7 @@ dependencies:
     - image
     - leaflet
     - path
+    - text
     - votingapi_widgets
 id: node.upload_image.default
 targetEntityType: node
@@ -61,10 +63,10 @@ content:
         height: 300
         auto_center: 1
         map_position:
-          force: false
+          force: true
           center:
-            lat: 0.0
-            lon: 0.0
+            lat: 49.56652
+            lon: 46.46791
           zoomControlPosition: topleft
           zoom: 5
           minZoom: 1
@@ -122,6 +124,14 @@ content:
     region: content
     settings:
       show_initial_vote: false
+    third_party_settings: {  }
+  field_remove_background:
+    type: text_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_upload_image:
     type: image_image
