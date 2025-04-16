@@ -29,8 +29,7 @@
 
 {%
   set classes = [
-    'views-view-responsive-grid',
-    'views-view-responsive-grid--' ~ options.alignment,
+    'flex items-stretch p-4 gap-3'
   ]
 %}
 
@@ -38,6 +37,7 @@
     '--views-responsive-grid--column-count:' ~ options.columns ~ ';',
     '--views-responsive-grid--cell-min-width:' ~ options.cell_min_width ~ 'px;',
     '--views-responsive-grid--layout-gap:' ~ options.grid_gutter ~ 'px;',
+    
   ]
 %}
 
@@ -47,7 +47,7 @@
 <div{{ attributes.addClass(classes).setAttribute('style', responsive_grid_styles|join()) }}>
   {% for item in items %}
     <div class="views-view-responsive-grid__item">
-      <div class="views-view-responsive-grid__item-inner flex flex-col gap-3 pb-3 items-center">
+      <div class="views-view-responsive-grid__item-inner flex flex-col gap-3 pb-3 text-left">
         {{- item.content -}}
       </div>
     </div>

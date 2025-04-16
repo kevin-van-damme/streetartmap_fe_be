@@ -10,6 +10,8 @@
     --color-amber-500: oklch(76.9% 0.188 70.08);
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
     --text-base: 1rem;
     --text-base--line-height: calc(1.5 / 1);
     --font-weight-normal: 400;
@@ -228,6 +230,9 @@
     width: 100%;
     height: 100%;
   }
+  .h-8 {
+    height: calc(var(--spacing) * 8);
+  }
   .h-full {
     height: 100%;
   }
@@ -255,6 +260,9 @@
   .flex-col {
     flex-direction: column;
   }
+  .flex-row {
+    flex-direction: row;
+  }
   .items-center {
     align-items: center;
   }
@@ -264,8 +272,17 @@
   .justify-between {
     justify-content: space-between;
   }
+  .justify-center {
+    justify-content: center;
+  }
   .justify-end {
     justify-content: flex-end;
+  }
+  .justify-evenly {
+    justify-content: space-evenly;
+  }
+  .gap-1 {
+    gap: calc(var(--spacing) * 1);
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
@@ -278,6 +295,9 @@
   }
   .overflow-x-hidden {
     overflow-x: hidden;
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
   }
   .rounded-xl {
     border-radius: var(--radius-xl);
@@ -340,9 +360,16 @@
   .pl-2 {
     padding-left: calc(var(--spacing) * 2);
   }
+  .text-left {
+    text-align: left;
+  }
   .text-base {
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
+  }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
   }
   .text-\[22px\] {
     font-size: 22px;
@@ -370,6 +397,9 @@
     --tw-tracking: -0.015em;
     letter-spacing: -0.015em;
   }
+  .text-\[\#9daab8\] {
+    color: #9daab8;
+  }
   .text-amber-500 {
     color: var(--color-amber-500);
   }
@@ -384,10 +414,22 @@
       color: #9daab8;
     }
   }
+  .hover\:text-white {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-white);
+      }
+    }
+  }
   .focus\:border-none {
     &:focus {
       --tw-border-style: none;
       border-style: none;
+    }
+  }
+  .focus\:text-white {
+    &:focus {
+      color: var(--color-white);
     }
   }
   .focus\:ring-0 {
@@ -400,6 +442,11 @@
     &:focus {
       outline-style: var(--tw-outline-style);
       outline-width: 0px;
+    }
+  }
+  .active\:text-white {
+    &:active {
+      color: var(--color-white);
     }
   }
   .\@\[480px\]\:rounded-xl {

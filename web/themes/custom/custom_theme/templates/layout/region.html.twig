@@ -12,14 +12,13 @@
  * @see template_preprocess_region()
  */
 #}
-{%
-  set classes = [
-    'region',
-    'region-' ~ region|clean_class,
-  ]
-%}
+{% set classes = ['region', 'region-' ~ (region|clean_class)] %}
+
+{% if region == 'footer' %}
+  {# Add specific classes for the footer region #}
+  {% set classes = classes|merge(['region-footer', 'flex', 'gap-2', 'border-t', 'border-[#293038]', 'bg-[#1c2126]', 'px-4', 'pb-3', 'pt-2']) %}
+{% endif %}
+
 {% if content %}
-  <div{{ attributes.addClass(classes) }}>
-    {{ content }}
-  </div>
+  <div {{ attributes.addClass(classes) }}>{{ content }}</div>
 {% endif %}
