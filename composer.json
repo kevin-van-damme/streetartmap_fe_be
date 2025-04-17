@@ -16,9 +16,11 @@
     ],
     "require": {
         "composer/installers": "^2.3",
+        "drupal/better_exposed_filters": "7.0.x-dev@dev",
         "drupal/core-composer-scaffold": "^11.1",
         "drupal/core-project-message": "^11.1",
         "drupal/core-recommended": "^11.1",
+        "drupal/eu_cookie_compliance": "^1.25",
         "drupal/feeds": "^3.0",
         "drupal/gin": "^4.0",
         "drupal/gin_login": "^2.1",

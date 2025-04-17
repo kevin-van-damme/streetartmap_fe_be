@@ -3,6 +3,8 @@
 - PathAuto (generating urls/aliases)
 - SMTP Authentication Support (needed for emailconfirmation when registering)
 - Leaflet (for showing a map with pins of the uploaded streetart)
+- Better Exposed Filters (https://www.drupal.org/project/better_exposed_filters/releases/7.0.x-devddev )
+- EU Cookie Compliance (https://www.drupal.org/project/eu_cookie_compliance)
 
 
 # Installed Themes

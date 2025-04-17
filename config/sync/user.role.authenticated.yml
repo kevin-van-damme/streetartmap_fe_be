@@ -8,6 +8,7 @@ dependencies:
   module:
     - comment
     - contact
+    - eu_cookie_compliance
     - file
     - filter
     - node
@@ -29,6 +30,7 @@ permissions:
   - 'create upload_image content'
   - 'delete own files'
   - 'delete own upload_image content'
+  - 'display eu cookie compliance popup'
   - 'edit own upload_image content'
   - 'edit own vote on node:upload_image:field_rating'
   - 'post comments'
