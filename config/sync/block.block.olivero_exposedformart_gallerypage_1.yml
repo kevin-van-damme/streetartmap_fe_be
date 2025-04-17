@@ -1,0 +1,28 @@
+uuid: 27682473-39c2-4a33-a268-491c43ca4b55
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.art_gallery
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: olivero_exposedformart_gallerypage_1
+theme: olivero
+region: content
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:art_gallery-page_1'
+settings:
+  id: 'views_exposed_filter_block:art_gallery-page_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/art-gallery"

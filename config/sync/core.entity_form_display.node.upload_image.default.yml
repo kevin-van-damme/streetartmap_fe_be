@@ -17,7 +17,6 @@ dependencies:
     - leaflet
     - path
     - text
-    - votingapi_widgets
 id: node.upload_image.default
 targetEntityType: node
 bundle: upload_image
@@ -118,16 +117,9 @@ content:
       feature_properties:
         values: ''
     third_party_settings: {  }
-  field_rating:
-    type: voting_api_widget
-    weight: 26
-    region: content
-    settings:
-      show_initial_vote: false
-    third_party_settings: {  }
   field_remove_background:
     type: text_textfield
-    weight: 27
+    weight: 12
     region: content
     settings:
       size: 60
@@ -186,4 +178,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  field_rating: true

@@ -185,6 +185,11 @@ display:
           plugin_id: bundle
           value:
             upload_image: upload_image
+          group: 1
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
       style:
         type: grid
       row:
