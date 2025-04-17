@@ -1,0 +1,9 @@
+uuid: bf589489-5e9d-4ecb-b9bb-6303ce66be23
+langcode: en
+status: true
+dependencies: {  }
+name: Colours
+vid: colours
+description: 'this is used as filter for the colours of the illustrations'
+weight: 0
+new_revision: false

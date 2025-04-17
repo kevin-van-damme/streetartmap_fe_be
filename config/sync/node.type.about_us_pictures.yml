@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: 'About us Pictures'
 type: about_us_pictures
-description: null
+description: 'This is used for the about us pictures in that page'
 help: null
 new_revision: true
 preview_mode: 1
