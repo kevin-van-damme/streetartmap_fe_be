@@ -233,6 +233,9 @@
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
+  .h-12 {
+    height: calc(var(--spacing) * 12);
+  }
   .h-full {
     height: 100%;
   }
@@ -247,6 +250,9 @@
   }
   .min-w-0 {
     min-width: calc(var(--spacing) * 0);
+  }
+  .min-w-40 {
+    min-width: calc(var(--spacing) * 40);
   }
   .flex-1 {
     flex: 1;
@@ -305,6 +311,10 @@
   .rounded-l-none {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+  }
+  .rounded-r-none {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
   .border-t {
     border-top-style: var(--tw-border-style);
