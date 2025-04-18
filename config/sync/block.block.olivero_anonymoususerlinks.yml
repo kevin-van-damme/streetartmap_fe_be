@@ -1,0 +1,25 @@
+uuid: 64ff4819-2668-4f28-a100-0432ca2b9f3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.anonymous-user-links
+  module:
+    - system
+  theme:
+    - olivero
+id: olivero_anonymoususerlinks
+theme: olivero
+region: secondary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:anonymous-user-links'
+settings:
+  id: 'system_menu_block:anonymous-user-links'
+  label: 'Anonymous User Links'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

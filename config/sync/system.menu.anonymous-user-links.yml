@@ -1,0 +1,8 @@
+uuid: 6ee51d25-a4df-48ba-bb29-2918d9574249
+langcode: en
+status: true
+dependencies: {  }
+id: anonymous-user-links
+label: 'Anonymous User Links'
+description: 'use this links for a anonymous user to register'
+locked: false

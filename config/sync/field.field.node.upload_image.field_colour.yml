@@ -1,0 +1,29 @@
+uuid: 0e46e734-b234-4edd-b620-1b4bc29a741e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_colour
+    - node.type.upload_image
+    - taxonomy.vocabulary.colours
+id: node.upload_image.field_colour
+field_name: field_colour
+entity_type: node
+bundle: upload_image
+label: Colour
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      colours: colours
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
