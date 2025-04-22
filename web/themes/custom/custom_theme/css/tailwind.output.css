@@ -8,6 +8,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-amber-500: oklch(76.9% 0.188 70.08);
+    --color-blue-500: oklch(62.3% 0.214 259.815);
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-sm: 0.875rem;
@@ -340,6 +341,9 @@
   .bg-\[\#293038\] {
     background-color: #293038;
   }
+  .bg-blue-500 {
+    background-color: var(--color-blue-500);
+  }
   .bg-cover {
     background-size: cover;
   }
@@ -369,9 +373,6 @@
   }
   .pl-2 {
     padding-left: calc(var(--spacing) * 2);
-  }
-  .text-left {
-    text-align: left;
   }
   .text-base {
     font-size: var(--text-base);

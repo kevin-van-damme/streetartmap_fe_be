@@ -25,19 +25,18 @@
  */
 #}
 
+{% set is_map_mode = 'content-map' in attributes.class %}  {# Or pass this from parent #}
+{% set is_all_content_mode = 'all-content' in attributes.class %}  {# Or pass this from parent #}
+
+{# Attach the responsive grid library. #}
 {{ attach_library('views/views.responsive-grid') }}
 
-{%
-  set classes = [
-    'flex items-stretch p-4 gap-3'
-  ]
-%}
 
 {% set responsive_grid_styles = [
     '--views-responsive-grid--column-count:' ~ options.columns ~ ';',
     '--views-responsive-grid--cell-min-width:' ~ options.cell_min_width ~ 'px;',
     '--views-responsive-grid--layout-gap:' ~ options.grid_gutter ~ 'px;',
-    
+
   ]
 %}
 
@@ -47,7 +46,7 @@
 <div{{ attributes.addClass(classes).setAttribute('style', responsive_grid_styles|join()) }}>
   {% for item in items %}
     <div class="views-view-responsive-grid__item">
-      <div class="views-view-responsive-grid__item-inner flex flex-col gap-3 pb-3 text-left">
+      <div class="views-view-responsive-grid__item-inner">
         {{- item.content -}}
       </div>
     </div>

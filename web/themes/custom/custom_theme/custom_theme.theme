@@ -19,3 +19,4 @@ function custom_theme_preprocess_image_widget(array &$variables): void {
     unset($data['preview']);
   }
 }
+
