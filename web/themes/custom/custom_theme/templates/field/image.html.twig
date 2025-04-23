@@ -13,7 +13,7 @@
 {%
 set classes = [
   style_name ? 'image-style-' ~ style_name|clean_class,
-  "w-full bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
+  "bg-center bg-no-repeat aspect-square bg-cover rounded-xl"
 ]
 %}
 <img{{ attributes.addClass(classes) }} />

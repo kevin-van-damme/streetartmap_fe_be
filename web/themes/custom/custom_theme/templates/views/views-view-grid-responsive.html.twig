@@ -25,30 +25,32 @@
  */
 #}
 
-{% set is_map_mode = 'content-map' in attributes.class %}  {# Or pass this from parent #}
-{% set is_all_content_mode = 'all-content' in attributes.class %}  {# Or pass this from parent #}
+{% set is_map_mode = 'content-map' in attributes.class %}
+{# Or pass this from parent #}
+{% set is_all_content_mode = 'all-content' in attributes.class %}
+{# Or pass this from parent #}
 
 {# Attach the responsive grid library. #}
 {{ attach_library('views/views.responsive-grid') }}
 
+{% set column_count = options.columns|default(3) %}
+{% set cell_min_width = options.cell_min_width|default(200) %}
+{% set grid_gutter = options.grid_gutter|default(16) %}
 
 {% set responsive_grid_styles = [
-    '--views-responsive-grid--column-count:' ~ options.columns ~ ';',
-    '--views-responsive-grid--cell-min-width:' ~ options.cell_min_width ~ 'px;',
-    '--views-responsive-grid--layout-gap:' ~ options.grid_gutter ~ 'px;',
+    '--views-responsive-grid--column-count:' ~ column_count ~ ';',
+    '--views-responsive-grid--cell-min-width:' ~ cell_min_width ~ 'px;',
+    '--views-responsive-grid--layout-gap:' ~ grid_gutter ~ 'px;',
+] %}
 
-  ]
-%}
-
-{% if title %}
-  <h3>{{ title }}</h3>
+	{% if title %}<h3>{{ title }}
+</h3>
 {% endif %}
-<div{{ attributes.addClass(classes).setAttribute('style', responsive_grid_styles|join()) }}>
-  {% for item in items %}
-    <div class="views-view-responsive-grid__item">
-      <div class="views-view-responsive-grid__item-inner">
-        {{- item.content -}}
-      </div>
-    </div>
-  {% endfor %}
+	<div class="views-view-responsive-grid grid w-full my-3 overflow-hidden grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center" {{ attributes.addClass(classes).setAttribute('style', responsive_grid_styles|join()) }}> {% for item in items %}
+		<div class="views-view-responsive-grid__item">
+			<div class="views-view-responsive-grid__item-inner flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60 justify-between">
+				{{- item.content -}}
+			</div>
+		</div>
+	{% endfor %}
 </div>

@@ -627,6 +627,7 @@ display:
           hide_empty: false
       defaults:
         title: false
+        css_class: false
         pager: false
         link_display: false
         link_url: false
@@ -636,6 +637,7 @@ display:
         fields: false
         arguments: false
       relationships: {  }
+      css_class: content-map
       display_description: ''
       link_display: '0'
       link_url: ''
@@ -1058,7 +1060,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_link: ''
+            image_link: content
             image_style: street_art_display_format
             image_loading:
               attribute: lazy
@@ -1229,7 +1231,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_link: ''
+            image_link: content
             image_style: street_art_display_format
             image_loading:
               attribute: lazy
@@ -1395,8 +1397,8 @@ display:
       tags:
         - 'config:field.storage.node.field_rating'
         - 'config:field.storage.node.field_upload_image'
-  page_1:
-    id: page_1
+  grid_all_images:
+    id: grid_all_images
     display_title: 'All Street Art'
     display_plugin: page
     position: 1
@@ -1502,7 +1504,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_link: ''
+            image_link: content
             image_style: street_art_display_format
             image_loading:
               attribute: lazy
@@ -1521,7 +1523,7 @@ display:
         options:
           offset: 0
           pagination_heading_level: h4
-          items_per_page: 12
+          items_per_page: 4
           total_pages: null
           id: 0
           tags:
@@ -1537,7 +1539,7 @@ display:
             offset_label: Offset
           show_more_text: 'Load More'
           result_display_method: html
-          initial: 12
+          initial: 4
           effects:
             type: fade
             speed_type: slow
@@ -1569,12 +1571,14 @@ display:
       arguments: {  }
       defaults:
         title: false
+        css_class: false
         pager: false
         relationships: false
         fields: false
         sorts: false
         arguments: false
       relationships: {  }
+      css_class: all-content
       display_description: ''
       display_extenders: {  }
       path: art-gallery
