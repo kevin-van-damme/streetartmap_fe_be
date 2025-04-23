@@ -1,0 +1,32 @@
+uuid: 99057cf5-85f9-4ba7-9097-39256633cb1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.location2.feeds_item
+    - field.field.taxonomy_term.location2.field_zipcode
+    - taxonomy.vocabulary.location2
+  module:
+    - text
+id: taxonomy_term.location2.default
+targetEntityType: taxonomy_term
+bundle: location2
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_zipcode:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  feeds_item: true

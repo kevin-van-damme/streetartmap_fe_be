@@ -1,0 +1,25 @@
+uuid: 7a5d73d2-2a8d-432f-a92c-39c815604b4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.anonymous-user-links
+  module:
+    - system
+  theme:
+    - my_new_theme
+id: my_new_theme_anonymoususerlinks
+theme: my_new_theme
+region: secondary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:anonymous-user-links'
+settings:
+  id: 'system_menu_block:anonymous-user-links'
+  label: 'Anonymous User Links'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

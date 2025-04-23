@@ -1,0 +1,29 @@
+uuid: 962f5e1e-aac4-4810-abb9-6d77c7f0cad4
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.about_us_pictures
+  module:
+    - system
+    - views
+  theme:
+    - my_new_theme
+id: my_new_theme_views_block__about_us_pictures_block_1
+theme: my_new_theme
+region: sidebar_first
+weight: -7
+provider: null
+plugin: 'views_block:about_us_pictures-block_1'
+settings:
+  id: 'views_block:about_us_pictures-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: '2'
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/12

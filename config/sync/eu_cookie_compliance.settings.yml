@@ -3,6 +3,7 @@ _core:
 langcode: en
 dependencies:
   config:
+    - filter.format.basic_html
     - filter.format.full_html
 uuid: 92a4caf2-3bfe-42cc-bf25-3f9cdaf886ca
 popup_enabled: true
@@ -31,7 +32,7 @@ popup_agreed:
   format: full_html
 popup_find_more_button_message: 'More info'
 popup_hide_button_message: Hide
-popup_link: '<front>'
+popup_link: /node/39
 popup_link_new_window: true
 popup_height: null
 popup_width: 100%

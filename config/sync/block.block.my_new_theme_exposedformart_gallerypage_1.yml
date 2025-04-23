@@ -1,0 +1,28 @@
+uuid: 2e9b005f-d28b-42bb-8e21-33cbd62e16ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.art_gallery
+  module:
+    - system
+    - views
+  theme:
+    - my_new_theme
+id: my_new_theme_exposedformart_gallerypage_1
+theme: my_new_theme
+region: content
+weight: -10
+provider: null
+plugin: 'views_exposed_filter_block:art_gallery-page_1'
+settings:
+  id: 'views_exposed_filter_block:art_gallery-page_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/art-gallery"

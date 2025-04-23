@@ -1,0 +1,29 @@
+uuid: 8a1633f3-2fb7-4810-8abb-c88bf689f682
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - system
+  theme:
+    - custom_theme
+id: custom_theme_footer
+theme: custom_theme
+region: footer
+weight: -8
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Footer
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/14

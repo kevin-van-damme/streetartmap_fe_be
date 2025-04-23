@@ -1,0 +1,9 @@
+uuid: 705736fe-6cf6-4049-a718-fd559420a942
+langcode: en
+status: true
+dependencies: {  }
+name: Location2
+vid: location2
+description: test
+weight: 0
+new_revision: false

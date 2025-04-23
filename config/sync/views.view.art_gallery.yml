@@ -9,6 +9,8 @@ dependencies:
     - image.style.street_art_display_format
     - node.type.upload_image
     - taxonomy.vocabulary.categories
+    - taxonomy.vocabulary.colours
+    - taxonomy.vocabulary.location2
   module:
     - better_exposed_filters
     - geofield
@@ -216,7 +218,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 4
+          items_per_page: 6
       exposed_form:
         type: bef
         options:
@@ -243,19 +245,38 @@ display:
               reset_button_always_show: true
             filter:
               field_category_target_id:
-                plugin_id: bef
+                plugin_id: default
                 advanced:
                   sort_options: false
                   rewrite:
                     filter_rewrite_values: ''
                     filter_rewrite_values_key: false
-                  collapsible: false
+                  collapsible: true
                   collapsible_disable_automatic_open: false
                   is_secondary: false
-                  hide_label: false
-                select_all_none: false
-                select_all_none_nested: false
-                display_inline: false
+                  hide_label: true
+              field_colour_target_id:
+                plugin_id: default
+                advanced:
+                  sort_options: false
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: true
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+                  hide_label: true
+              field_location_target_id:
+                plugin_id: default
+                advanced:
+                  sort_options: true
+                  rewrite:
+                    filter_rewrite_values: ''
+                    filter_rewrite_values_key: false
+                  collapsible: true
+                  collapsible_disable_automatic_open: false
+                  is_secondary: false
+                  hide_label: true
       access:
         type: perm
         options:
@@ -1456,6 +1477,11 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 4
       sorts:
         field_rating_status:
           id: field_rating_status
@@ -1473,6 +1499,7 @@ display:
       arguments: {  }
       defaults:
         title: false
+        pager: false
         link_display: false
         link_url: false
         relationships: false
@@ -1688,6 +1715,7 @@ display:
           plugin_id: bundle
           value:
             upload_image: upload_image
+          group: 1
         field_category_target_id:
           id: field_category_target_id
           table: node__field_category
@@ -1733,6 +1761,102 @@ display:
           reduce_duplicates: false
           vid: categories
           type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_colour_target_id:
+          id: field_colour_target_id
+          table: node__field_colour
+          field: field_colour_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_colour_target_id_op
+            label: 'Colour '
+            description: ''
+            use_operator: false
+            operator: field_colour_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_colour_target_id
+            required: false
+            remember: true
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: colours
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+        field_location_target_id_1:
+          id: field_location_target_id_1
+          table: node__field_location
+          field: field_location_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_location_target_id_1_op
+            label: 'Location '
+            description: ''
+            use_operator: false
+            operator: field_location_target_id_1_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_location_target_id_1
+            required: false
+            remember: true
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: location2
+          type: textfield
           hierarchy: false
           limit: true
           error_message: true

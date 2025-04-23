@@ -64,4 +64,7 @@ theme:
   olivero: 0
   claro: 0
   gin: 0
+  stable9: 0
+  my_new_theme: 0
+  custom_theme: 0
 profile: standard

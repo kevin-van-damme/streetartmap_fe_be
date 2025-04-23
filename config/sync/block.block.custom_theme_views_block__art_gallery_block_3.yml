@@ -1,0 +1,29 @@
+uuid: be58966f-7554-4d0c-b0c4-bc5569552d15
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.art_gallery
+  module:
+    - system
+    - views
+  theme:
+    - custom_theme
+id: custom_theme_views_block__art_gallery_block_3
+theme: custom_theme
+region: content
+weight: -6
+provider: null
+plugin: 'views_block:art_gallery-block_3'
+settings:
+  id: 'views_block:art_gallery-block_3'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/14
