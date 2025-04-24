@@ -1,0 +1,12 @@
+uuid: 8f75d06b-b524-43d8-b478-2963feb6c16d
+langcode: en
+status: true
+dependencies: {  }
+id: webform
+label: 'Contact Us'
+recipients:
+  - admin@example.com
+reply: ''
+weight: 0
+message: ''
+redirect: /node/40

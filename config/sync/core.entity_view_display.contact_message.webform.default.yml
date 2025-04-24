@@ -1,0 +1,38 @@
+uuid: cddfcb3d-306c-46fe-8136-1b84e85c77d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - contact.form.webform
+    - field.field.contact_message.webform.field_e_mail
+    - field.field.contact_message.webform.field_name
+id: contact_message.webform.default
+targetEntityType: contact_message
+bundle: webform
+mode: default
+content:
+  field_e_mail:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  message:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }
