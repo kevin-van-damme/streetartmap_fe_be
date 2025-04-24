@@ -203,8 +203,8 @@
       max-width: 96rem;
     }
   }
-  .my-3 {
-    margin-block: calc(var(--spacing) * 3);
+  .my-4 {
+    margin-block: calc(var(--spacing) * 4);
   }
   .block {
     display: block;
@@ -270,8 +270,8 @@
   .resize-none {
     resize: none;
   }
-  .grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+  .grid-cols-\[repeat\(auto-fit\,minmax\(250px\,1fr\)\)\] {
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -312,11 +312,17 @@
   .gap-4 {
     gap: calc(var(--spacing) * 4);
   }
+  .gap-5 {
+    gap: calc(var(--spacing) * 5);
+  }
   .overflow-hidden {
     overflow: hidden;
   }
   .overflow-x-hidden {
     overflow-x: hidden;
+  }
+  .overflow-y-auto {
+    overflow-y: auto;
   }
   .rounded-full {
     border-radius: calc(infinity * 1px);
@@ -370,6 +376,9 @@
   }
   .p-4 {
     padding: calc(var(--spacing) * 4);
+  }
+  .p-8 {
+    padding: calc(var(--spacing) * 8);
   }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
@@ -435,6 +444,12 @@
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
+  .\[-ms-scrollbar-style\:none\] {
+    -ms-scrollbar-style: none;
+  }
+  .\[scrollbar-width\:none\] {
+    scrollbar-width: none;
+  }
   .placeholder\:text-\[\#9daab8\] {
     &::placeholder {
       color: #9daab8;
@@ -475,21 +490,6 @@
       color: var(--color-white);
     }
   }
-  .sm\:grid-cols-2 {
-    @media (width >= 40rem) {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-  .md\:grid-cols-3 {
-    @media (width >= 48rem) {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-  }
-  .lg\:grid-cols-4 {
-    @media (width >= 64rem) {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-  }
   .\@\[480px\]\:rounded-xl {
     @container (width >= 480px) {
       border-radius: var(--radius-xl);
@@ -503,6 +503,11 @@
   .\@\[480px\]\:py-3 {
     @container (width >= 480px) {
       padding-block: calc(var(--spacing) * 3);
+    }
+  }
+  .\[\&\:\:-webkit-scrollbar\]\:hidden {
+    &::-webkit-scrollbar {
+      display: none;
     }
   }
 }

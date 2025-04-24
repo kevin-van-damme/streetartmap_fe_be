@@ -34,7 +34,30 @@
 	{% if rows %}
 		{% if 'all-content' in attributes.class %}
 			<div class="all-content">
-				{{ rows }}
+				<div class="grid gap-5 grid-cols-[repeat(auto-fit,minmax(250px,1fr))] place-items-center">
+					{{ rows }}
+				</div>
+			</div>
+		{% elseif 'about-us-pic' in attributes.class %}
+			<div class="about-us-pic">
+				<div class="grid gap-5 grid-cols-[repeat(auto-fit,minmax(250px,1fr))] place-items-center">
+					{{ rows }}
+			</div>
+		{% elseif 'most-liked' in attributes.class %}
+			<div class="most-liked">
+				<div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+					<div class="flex  items-stretch p-4 gap-3">
+						{{ rows }}
+					</div>
+				</div>
+			</div>
+		{% elseif 'most-recent' in attributes.class %}
+			<div class="most-recent">
+				<div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+					<div class="flex  items-stretch p-4 gap-3">
+						{{ rows }}
+					</div>
+				</div>
 			</div>
 		{% else %}
 			<div class="view-content">

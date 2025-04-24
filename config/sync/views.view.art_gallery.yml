@@ -213,7 +213,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 4
+          items_per_page: 10
       exposed_form:
         type: basic
         options:
@@ -337,6 +337,7 @@ display:
           entity_type: node
           entity_field: uid
           plugin_id: standard
+      css_class: most-recent
       link_display: page_1
       link_url: ''
       header: {  }
@@ -1375,6 +1376,7 @@ display:
       arguments: {  }
       defaults:
         title: false
+        css_class: false
         link_display: false
         link_url: false
         relationships: false
@@ -1382,6 +1384,7 @@ display:
         sorts: false
         arguments: false
       relationships: {  }
+      css_class: most-liked
       display_description: ''
       link_display: '0'
       link_url: ''

@@ -211,7 +211,7 @@ display:
           columns: 1
           cell_min_width: 100
           grid_gutter: 20
-          alignment: horizontal
+          alignment: vertical
       row:
         type: fields
         options:
@@ -230,6 +230,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      css_class: about-us-pic
       header: {  }
       footer: {  }
       display_extenders: {  }
