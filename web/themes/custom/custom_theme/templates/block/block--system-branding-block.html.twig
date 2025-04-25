@@ -1,0 +1,36 @@
+{% extends "block.html.twig" %}
+{#
+/**
+ * @file
+ * Theme override for a branding block.
+ *
+ * Each branding element variable (logo, name, slogan) is only available if
+ * enabled in the block configuration.
+ *
+ * Available variables:
+ * - site_logo: Logo for site as defined in Appearance or theme settings.
+ * - site_name: Name for site as defined in Site information settings.
+ * - site_slogan: Slogan for site as defined in Site information settings.
+ */
+#}
+{% block content %}
+	<div class="@container">
+		<div class="@[480px]:px-4 @[480px]:py-3">
+			<div class="bg-cover bg-center flex flex-col justify-end overflow-hidden bg-[#111418] @[480px]:rounded-xl min-h-80" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 25%), url(&quot;https://cdn.usegalileo.ai/sdxl10/b3793b39-a8b8-4020-b2ca-6bf4f976cb56.png&quot;);">
+				{% if site_logo %}
+					<a href="{{ path('<front>') }}" rel="home" class="site-logo">
+						<img src="{{ site_logo }}" alt="{{ 'Home'|t }}" fetchpriority="high"/>
+					</a>
+				{% endif %}
+				{% if site_name %}
+					<div class="site-name flex p-4">
+						<a href="{{ path('<front>') }}" rel="home" class="text-white tracking-light text-[28px] font-bold leading-tight">{{ site_name }}</a>
+					</div>
+				{% endif %}
+				{% if site_slogan %}
+					<div class="site-slogan">{{ site_slogan }}</div>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

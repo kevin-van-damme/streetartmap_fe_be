@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Theme override for an 'input' #type form element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ * @see template_preprocess_input()
+ */
+#}
+{# <input{{attributes}}/>{{ children }} #}
+
+{%
+    set classes = [
+        'form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#293038] focus:border-none h-full placeholder:text-[#9daab8] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal'
+    ]
+%}
+
+
+<input {{attributes.addClass(classes)}} placeholder="Search for artists, locations or tags" value=""/>{{ children }}

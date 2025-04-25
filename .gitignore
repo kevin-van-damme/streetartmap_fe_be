@@ -13,7 +13,6 @@ sites/*/services.yml
 /web/themes/contrib
 /web/profiles/contrib
 
-/web/themes/custom/
 
 # Ignore Drupal's file directories
 /sites/*/files/
