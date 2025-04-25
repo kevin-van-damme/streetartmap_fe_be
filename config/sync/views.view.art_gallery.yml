@@ -597,6 +597,16 @@ display:
         type: none
         options:
           offset: 0
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: true
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
       arguments: {  }
       style:
         type: leaflet_map
@@ -610,9 +620,9 @@ display:
             value: ''
             options: '{"permanent":false,"direction":"center"}'
           leaflet_popup:
-            value: ''
+            value: '#rendered_view_fields'
             options: '{"maxWidth":"300","minWidth":"50","autoPan":true}'
-            view_mode: full
+            view_mode: default
           leaflet_map: 'OSM Mapnik'
           height: '400'
           height_unit: px
@@ -682,6 +692,7 @@ display:
       defaults:
         title: false
         pager: false
+        exposed_form: false
         link_display: false
         link_url: false
         style: false
@@ -1159,7 +1170,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_link: ''
+            image_link: content
             image_style: street_art_display_format
             image_loading:
               attribute: lazy
@@ -1397,7 +1408,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_link: ''
+            image_link: content
             image_style: street_art_display_format
             image_loading:
               attribute: lazy
@@ -1528,7 +1539,7 @@ display:
     display_plugin: block
     position: 6
     display_options:
-      title: 'View more like this?'
+      title: 'More like this?'
       fields:
         title:
           id: title
@@ -1648,6 +1659,19 @@ display:
           id: field_category_target_id
           table: node__field_category
           field: field_category_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+        field_location_target_id:
+          id: field_location_target_id
+          table: node__field_location
+          field: field_location_target_id
           relationship: none
           group_type: group
           admin_label: ''
